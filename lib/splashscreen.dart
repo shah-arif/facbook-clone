@@ -26,7 +26,9 @@ class _splashscreenState extends State<splashscreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('images/logo.jpg',height: 90,width: 150,),
-            CircularProgressIndicator(),
+            CircularProgressIndicator(
+              strokeWidth: 15,
+            ),
             // SpinKitThreeBounce(
             //   color: Color(0xff4867aa),
             //   size: 20,
