@@ -1,3 +1,5 @@
+import 'package:button/homescreen.dart';
+import 'package:button/login.dart';
 import 'package:button/splashscreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: splashscreen(),
+      home: login(),
+      //ddd
     );
   }
 }

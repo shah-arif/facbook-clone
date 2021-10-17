@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:button/homescreen.dart';
+import 'package:button/login.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class splashscreen extends StatefulWidget {
   const splashscreen({Key? key}) : super(key: key);
@@ -14,7 +16,7 @@ class _splashscreenState extends State<splashscreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 4), ()=> Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>homescreen()), (route) => false));
+    Timer(Duration(seconds: 4), ()=> Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>login()), (route) => false));
   }
   @override
   Widget build(BuildContext context) {
@@ -25,13 +27,13 @@ class _splashscreenState extends State<splashscreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset('images/logo.jpg',height: 90,width: 150,),
-            CircularProgressIndicator(
-              strokeWidth: 15,
-            ),
-            // SpinKitThreeBounce(
-            //   color: Color(0xff4867aa),
-            //   size: 20,
+            // CircularProgressIndicator(
+            //   strokeWidth: 15,
             // ),
+            SpinKitThreeBounce(
+              color: Color(0xff4867aa),
+              size: 20,
+            ),
           ],
         ),
       ),
